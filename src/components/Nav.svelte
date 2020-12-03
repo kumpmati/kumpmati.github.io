@@ -15,12 +15,12 @@
 
 <style>
   nav {
-    width: 15em;
     position: sticky;
     top: 0;
+    width: 9em;
     z-index: 100;
     background-color: var(--bg-nav);
-    padding: .25em 0;
+    padding: .25em;
   }
 
   ul {
@@ -30,6 +30,7 @@
   }
 
   li {
+    width: 100%;
     margin: .25em 0;
   }
 
@@ -43,5 +44,22 @@
   [aria-current] {
     padding-left: 2.25em;
     font-weight: bold;
+  }
+
+  @media all and (max-width: 1160px) {
+    nav {
+      width: 100vw;
+    }
+
+    ul {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    li {
+      width: max-content;
+    }
   }
 </style>

@@ -78,7 +78,7 @@
 
   .details {
     color: var(--text-subtle);
-    margin-left: 1em;
+    margin: .25em 1em;
   }
 
   .github {

@@ -6,15 +6,16 @@
   import { fly } from 'svelte/transition';
 
   const options = [
-    "web dev",
-    "student",
-    "stackoverflow user",
-    "happy :-)",
-    "likes cats"
+    "Web dev",
+    "Student",
+    "A regular at StackOverflow",
+    "Happy 😎",
+    "Full-Stack developer",
+    "Svelte fan",
   ];
 
   let visible = 0;
-  setInterval(() => visible = (visible + 1) % options.length, 2000);
+  setInterval(() => visible = (visible + 1) % options.length, 1500);
 </script>
 
 <h1>Matias Kumpulainen</h1>
