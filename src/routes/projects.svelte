@@ -4,10 +4,11 @@
 
 <script>
   import Project from '../components/Project.svelte';
+  const url = "https://raw.githubusercontent.com/kumpmati/mvkump.dev/master/data/projects.json";
 
   const fetchData = (async () => {
     try {
-      const response = await fetch('/data/projects.json');
+      const response = await fetch(url);
       return (await response.json()).projects || [];
     } catch {
       return [];
