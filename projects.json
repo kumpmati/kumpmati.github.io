@@ -32,7 +32,7 @@
       "name": "mvkump.dev",
       "description": "This website.",
       "stack": ["Svelte"],
-      "githubUrl": "",
+      "githubUrl": "https://github.com/kumpmati/kumpmati.github.io",
       "url": ""
     }
   ]
