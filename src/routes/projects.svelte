@@ -3,8 +3,9 @@
 </svelte:head>
 
 <script>
+  import { baseUrl } from '../misc.js';
   import Project from '../components/Project.svelte';
-  const url = "https://raw.githubusercontent.com/kumpmati/mvkump.dev/master/data/projects.json";
+  const url = `${baseUrl}/projects.json`;
 
   const fetchData = (async () => {
     try {

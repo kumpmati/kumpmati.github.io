@@ -35,6 +35,7 @@
   }
 
   li > a {
+    border-radius: .5em;
     display: block;
     padding: .75em 2em;
     text-decoration: none;

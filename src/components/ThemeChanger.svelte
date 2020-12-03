@@ -13,12 +13,14 @@
   }
 
   onMount(() => {
-    current = load("light");
+    current = load("dark");
     changeTheme(current);
   });
 </script>
 
-<button on:click={() => changeTheme()}>{current === "dark" ? "☽" : "☀"}</button>
+<button on:click={() => changeTheme()}>
+  {"☀"}
+</button>
 
 <style>
   button {
