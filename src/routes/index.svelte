@@ -8,22 +8,24 @@
   import { fly } from 'svelte/transition';
 
   const snippets = [
-    "Web dev",
-    "Student",
+    "Web developer",
     "StackOverflow regular",
-    "Happy 😎",
+    "Student",
     "Full-Stack developer",
     "Svelte fan",
+    "Happy :-)",
   ];
-  let currentIndex = 0;
+  let current = 0;
 
   onMount(async () => {
-    setInterval(() => currentIndex = (currentIndex + 1) % snippets.length, 1500);
+    // setup timer to change snippet
+    setInterval(() => current = (current + 1) % snippets.length, 1500);
 
+    // load extra snippets from github
     try {
       const res = await (await fetch(`${baseUrl}/snippets.txt`)).text();
-      const webSnippets = res.split("\n");
-      webSnippets.length > 0 && snippets.push(...webSnippets);
+      const webSnippets = res.split("\n").filter(s => s.trim() !== "");
+      snippets.push(...webSnippets);
     } catch {}
   });
 </script>
@@ -31,7 +33,7 @@
 <h1>Matias Kumpulainen</h1>
 <span>
   {#each snippets as option, i}
-    {#if i === currentIndex}
+    {#if i === current}
       <p
         in:fly|local={{ x: 10 }}
         out:fly|local={{ x: -10 }}
