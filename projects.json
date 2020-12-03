@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "name": "Nopsa",
+      "description": "UTU transcript of study records PDF analyser",
+      "stack": ["Svelte"],
+      "githubUrl": "https://github.com/kumpmati/nopsa",
+      "url": "https://kumpmati.github.io/nopsa"
+    },
+    {
+      "name": "Cahum",
+      "description": "Custom version of the 'Cards Against Humanity' game",
+      "stack": ["React", "NodeJS", "HTML5"],
+      "githubUrl": "https://github.com/kumpmati/cards-against-humanists",
+      "url": "https://cahum.xyz"
+    },
+    {
+      "name": "Color My Keyboard",
+      "description": "Control the LEDs in my RGB keyboard in realtime",
+      "stack": ["Firebase", "JavaScript", "HTML5"],
+      "githubUrl": "https://github.com/kumpmati/color-my-keyboard",
+      "url": "https://colormykeyboard.xyz/"
+    },
+    {
+      "name": "Cscr",
+      "description": "Tiny interpreted scripting language, written in GO",
+      "stack": ["Go"],
+      "githubUrl": "https://github.com/kumpmati/cscr",
+      "url": "https://github.com/kumpmati/cscr"
+    },
+    {
+      "name": "mvkump.dev",
+      "description": "This website.",
+      "stack": ["Svelte"],
+      "githubUrl": "",
+      "url": ""
+    }
+  ]
+}
