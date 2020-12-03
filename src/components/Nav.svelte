@@ -15,11 +15,12 @@
 
 <style>
   nav {
-    width: 100%;
+    width: 15em;
     position: sticky;
     top: 0;
     z-index: 100;
     background-color: var(--bg-nav);
+    padding: .25em 0;
   }
 
   ul {

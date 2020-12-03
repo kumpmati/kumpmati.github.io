@@ -6,6 +6,8 @@ html {
   --text-accent: rgb(100, 100, 255);
   --border: rgb(129, 129, 129);
   --border-subtle: rgb(214, 214, 214);
+  --tech-logo-width: 1.5em;
+  --tech-logo-height: 1.5em;
 }
 
 body {
