@@ -1,13 +1,13 @@
 <script>
   import ThemeChanger from './ThemeChanger.svelte';
   
-  export let segment;
+	export let segment;
 </script>
 
 <nav>
 	<ul>
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-    <li><a aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects">projects</a></li>
+    <li><a aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects" rel=prefetch>projects</a></li> <!-- Prefetch -->
     <li><a aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact</a></li>
     <ThemeChanger />
 	</ul>
@@ -49,11 +49,11 @@
 
   @media all and (max-width: 1160px) {
     nav {
-      width: 100vw;
+			width: 100%;
+			box-sizing: border-box;
     }
 
     ul {
-      width: 100vw;
       display: flex;
       align-items: center;
       flex-wrap: wrap;

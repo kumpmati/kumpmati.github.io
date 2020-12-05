@@ -1,7 +1,8 @@
 // Light theme CSS variables
 export default new Map()
-  .set("bg", "white")
-  .set("text", "black")
-  .set("text-subtle", "gray")
-  .set("text-accent", "rgb(100,100,255)")
-  .set("bg-nav", "rgba(255,255,255,0.9)");
+	.set("bg", "rgb(255,255,255)")
+	.set("text", "rgb(0,0,0)")
+	.set("text-subtle", "rgb(128,128,128)")
+	.set("text-accent", "rgb(0,150,175)")
+	.set("text-link", "rgb(0,100,175)")
+	.set("bg-nav", "rgba(255,255,255,0.9)");

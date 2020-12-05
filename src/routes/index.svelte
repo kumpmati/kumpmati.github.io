@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script>
+	import PageTransition from '../components/PageTransition.svelte';
   import { baseUrl } from '../misc';
   import { onMount } from 'svelte';
   import { fly } from 'svelte/transition';
@@ -30,19 +31,21 @@
   });
 </script>
 
-<h1>Matias Kumpulainen</h1>
-<span>
-  {#each snippets as option, i}
-    {#if i === current}
-      <p
-        in:fly|local={{ x: 10 }}
-        out:fly|local={{ x: -10 }}
-      >
-        {option}
-      </p>
-    {/if}
-  {/each}
-</span>
+<PageTransition>
+	<h1 class="page-title">Matias Kumpulainen</h1>
+	<span>
+		{#each snippets as option, i}
+			{#if i === current}
+				<p
+					in:fly|local={{ x: 10 }}
+					out:fly|local={{ x: -10 }}
+				>
+					{option}
+				</p>
+			{/if}
+		{/each}
+	</span>
+</PageTransition>
 
 <style>
   p {

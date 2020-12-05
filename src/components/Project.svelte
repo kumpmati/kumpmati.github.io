@@ -5,42 +5,7 @@
   export let stack = [];
   export let githubUrl = "https://github.com/kumpmati";
 
-  import React from './tech/React.svelte';
-  import Svelte from './tech/Svelte.svelte';
-  import Vue from './tech/Vue.svelte';
-  import Firebase from './tech/Firebase.svelte';
-  import Html5 from './tech/HTML5.svelte';
-  import NodeJs from './tech/NodeJs.svelte';
-  import JavaScript from './tech/JavaScript.svelte';
-  import Go from './tech/Go.svelte';
-
-  const svg = (name) => {
-    switch(name.toLowerCase()) {
-      case "react":
-        return React;
-
-      case "vue":
-        return Vue;
-
-      case "svelte":
-        return Svelte;
-
-      case "firebase":
-        return Firebase;
-
-      case "html5":
-        return Html5;
-
-      case "nodejs":
-        return NodeJs;
-
-      case "javascript":
-        return JavaScript;
-
-      case "go":
-        return Go;
-    }
-  }
+	import logos from './logos/index.js';
 </script>
 
 <li>
@@ -51,7 +16,7 @@
     <ul>
       {#each stack as tech}
         <span class="tech" title={tech}>
-          <svelte:component this={svg(tech)} />
+          <svelte:component this={logos[tech.toLowerCase()] || null} />
         </span>
       {/each}
     </ul>
@@ -82,9 +47,9 @@
   }
 
   .github {
-    color: var(--text-accent);
+		font-style: italic;
+    color: var(--text-link);
   }
-
 
   ul {
     padding-left: 1em;

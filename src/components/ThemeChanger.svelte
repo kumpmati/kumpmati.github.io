@@ -19,7 +19,7 @@
 </script>
 
 <button on:click={() => changeTheme()}>
-  {"☀"}
+  {current === "light" ? "🌞" : "🌙"}
 </button>
 
 <style>
