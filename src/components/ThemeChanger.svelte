@@ -1,39 +1,37 @@
 <script>
-  import { onMount } from 'svelte';
-  import { set, load } from '../theme';
+  import { onMount } from "svelte";
+  import { set, load } from "../theme";
 
   let current;
   const changeTheme = (scheme) => {
-    if(scheme) {
+    if (scheme) {
       current = scheme;
     } else {
-      current = current === "light" ? "dark" : "light";
+      current = current === "a" ? "b" : "a";
     }
     set(current);
-  }
+  };
 
   onMount(() => {
-    current = load("dark");
+    current = load("b");
     changeTheme(current);
   });
 </script>
 
-<button on:click={() => changeTheme()}>
-  {current === "light" ? "🌞" : "🌙"}
-</button>
+<button on:click={() => changeTheme()}> colors </button>
 
 <style>
   button {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    width: 4em;
+
+    min-width: 4em;
     height: 2em;
-    
-    margin: .75em 0;
+
+    margin: 0.75em 0;
     margin-left: 2em;
-    
+
     color: var(--text);
     background-color: transparent;
 
@@ -48,10 +46,16 @@
     color: var(--bg);
     background-color: var(--text-accent);
   }
-  
-  button:active, button:focus {
+
+  button:active,
+  button:focus {
     border: 1px solid var(--bg);
-    box-shadow: 0 0 0 .2em var(--text-accent);
+    box-shadow: 0 0 0 0.2em var(--text-accent);
   }
-  
+
+  @media all and (max-width: 1160px) {
+    button {
+      margin-left: 0;
+    }
+  }
 </style>

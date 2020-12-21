@@ -3,9 +3,9 @@
   export let description = "<missing description>";
   export let url = "<missing url>";
   export let stack = [];
-  export let githubUrl = "https://github.com/kumpmati";
+  export let githubUrl = null;
 
-	import logos from './logos/index.js';
+  import logos from "../graphics/tech/index.js";
 </script>
 
 <li>
@@ -22,7 +22,13 @@
     </ul>
   </div>
   <p class="details">{description}</p>
-  <a class="details github" target="_blank" referrerpolicy="no-referrer" href={githubUrl}>GitHub</a>
+  {#if githubUrl}
+    <a
+      class="details github"
+      target="_blank"
+      referrerpolicy="no-referrer"
+      href={githubUrl}>GitHub</a>
+  {/if}
 </li>
 
 <style>
@@ -43,11 +49,11 @@
 
   .details {
     color: var(--text-subtle);
-    margin: .25em 1em;
+    margin: 0.25em 1em;
   }
 
   .github {
-		font-style: italic;
+    font-style: italic;
     color: var(--text-link);
   }
 
@@ -57,7 +63,6 @@
   }
 
   .tech {
-    margin-right: .5em;
+    margin-right: 0.5em;
   }
-
 </style>

@@ -1,26 +1,42 @@
 <script>
-  import ThemeChanger from './ThemeChanger.svelte';
-  
-	export let segment;
+  export let segment;
 </script>
 
 <nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-    <li><a aria-current="{segment === 'projects' ? 'page' : undefined}" href="projects" rel=prefetch>projects</a></li> <!-- Prefetch -->
-    <li><a aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">contact</a></li>
-    <ThemeChanger />
-	</ul>
+  <ul>
+    <li>
+      <a
+        aria-current={segment === undefined ? 'page' : undefined}
+        href=".">home</a>
+    </li>
+    <li>
+      <a
+        aria-current={segment === 'projects' ? 'page' : undefined}
+        href="projects"
+        rel="prefetch">projects</a>
+    </li>
+    <li>
+      <a
+        aria-current={segment === 'contact' ? 'page' : undefined}
+        href="contact">contact</a>
+    </li>
+  </ul>
 </nav>
 
 <style>
   nav {
     position: sticky;
     top: 0;
+
+    padding: 0.5em 0;
+
     width: 9em;
+    height: var(--nav-height);
+
     z-index: 100;
     background-color: var(--bg-nav);
-    padding: .25em;
+    backdrop-filter: blur(var(--blur));
+    --nav-item-width: 100%;
   }
 
   ul {
@@ -30,14 +46,16 @@
   }
 
   li {
-    width: 100%;
-    margin: .25em 0;
+    width: var(--nav-item-width);
+    margin: 0;
+    padding: 0;
   }
 
   li > a {
-    border-radius: .5em;
+    border-radius: 0.5em;
     display: block;
-    padding: .75em 2em;
+    padding: 0.75em 2em;
+    margin: 0;
     text-decoration: none;
     transition: padding 50ms, font-weight 50ms;
   }
@@ -49,18 +67,26 @@
 
   @media all and (max-width: 1160px) {
     nav {
-			width: 100%;
-			box-sizing: border-box;
+      width: 100%;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     ul {
+      max-width: 30em;
       display: flex;
       align-items: center;
+      justify-content: space-evenly;
       flex-wrap: wrap;
     }
 
     li {
       width: max-content;
+    }
+
+    li > a,
+    [aria-current] {
+      padding: 0.75em 0;
     }
   }
 </style>

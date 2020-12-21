@@ -1,12 +1,8 @@
-<svelte:head>
-	<title>Projects</title>
-</svelte:head>
-
 <script>
-  import { baseUrl } from '../misc.js';
-	import PageTransition from '../components/PageTransition.svelte';
-	import Project from '../components/Project.svelte';
-	
+  import { baseUrl } from "../misc.js";
+  import PageTransition from "../components/PageTransition.svelte";
+  import Project from "../components/Project.svelte";
+
   const fetchData = (async () => {
     try {
       const response = await fetch(`${baseUrl}/projects.json`);
@@ -17,20 +13,22 @@
   })();
 </script>
 
+<svelte:head>
+  <title>Projects</title>
+</svelte:head>
 <PageTransition>
-	<h1 class="page-title">Projects</h1>
-	
-	<ul>
-		{#await fetchData}
-			<p>loading...</p>
-		{:then projects}
-			{#each projects as project}
-				<Project {...project} />
-			{/each}
-		{:catch err}
-			<p>{err.message}</p>
-		{/await}
-	</ul>
+  <h1 class="page-title">Projects</h1>
+  <ul>
+    {#await fetchData}
+      <p>loading...</p>
+    {:then projects}
+      {#each projects as project}
+        <Project {...project} />
+      {/each}
+    {:catch err}
+      <p>{err.message}</p>
+    {/await}
+  </ul>
 </PageTransition>
 
 <style>
