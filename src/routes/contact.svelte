@@ -9,9 +9,16 @@
 </svelte:head>
 <PageTransition>
   <h1 class="page-title">Contact</h1>
-  <div id="email">
+  <div class="contact">
     <h2>Email</h2>
     <a href="mailto:hello@mvkump.dev">hello@mvkump.dev</a>
+  </div>
+  <div class="contact">
+    <h2>LinkedIn</h2>
+    <a
+      href="https://www.linkedin.com/in/matias-kumpulainen-27b4421b9"
+      target="_blank"
+      referrerpolicy="no-referrer">Matias Kumpulainen</a>
   </div>
   <div id="illustration" in:fly|local={{ y: 100, duration: 500, delay: 500 }}>
     <Contact />
@@ -28,18 +35,17 @@
     color: var(--text-link);
   }
 
-  #email {
-    margin-left: 1em;
+  .contact {
+    margin: 2em 1em;
     color: var(--text-subtle);
   }
 
   #illustration {
     position: relative;
-    top: -10em;
-    left: 20vw;
+    top: -15em;
+    left: 30vw;
 
     width: max-content;
-    height: max-content;
     overflow: hidden;
     margin: 0;
 
@@ -49,7 +55,7 @@
 
   @media all and (max-width: 1160px) {
     #illustration {
-      width: 75vw;
+      width: 65vw;
     }
   }
 </style>
