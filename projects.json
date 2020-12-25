@@ -10,7 +10,7 @@
     {
       "name": "Cahum",
       "description": "Custom version of the 'Cards Against Humanity' game",
-      "stack": ["React", "NodeJS", "HTML5"],
+      "stack": ["React", "NodeJS"],
       "githubUrl": "https://github.com/kumpmati/cards-against-humanists",
       "url": "https://cahum.xyz"
     },
