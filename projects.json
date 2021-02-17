@@ -1,18 +1,25 @@
 {
   "projects": [
     {
-      "name": "Nopsa",
-      "description": "UTU transcript of study records PDF analyser",
-      "stack": ["Svelte"],
-      "githubUrl": "https://github.com/kumpmati/nopsa",
-      "url": "https://nopsa.xyz"
-    },
-    {
       "name": "Cahum",
       "description": "Custom version of the 'Cards Against Humanity' game",
       "stack": ["React", "NodeJS"],
       "githubUrl": "https://github.com/kumpmati/cards-against-humanists",
       "url": "https://cahum.xyz"
+    },
+    {
+      "name": "Wearhouse",
+      "description": "Reaktor junior preassignment for summer 2021 (Frontend)",
+      "stack": ["React"],
+      "githubUrl": "https://github.com/kumpmati/",
+      "url": "https://wearhouse.netlify.app/"
+    },
+    {
+      "name": "mvkump.dev",
+      "description": "This website",
+      "stack": ["Svelte"],
+      "githubUrl": "https://github.com/kumpmati/kumpmati.github.io",
+      "url": ""
     },
     {
       "name": "Color My Keyboard",
@@ -29,18 +36,11 @@
       "url": "https://github.com/kumpmati/cscr"
     },
     {
-      "name": "mvkump.dev",
-      "description": "This website",
+      "name": "Nopsa",
+      "description": "PWA that analyses a UTU transcript of study records PDF",
       "stack": ["Svelte"],
-      "githubUrl": "https://github.com/kumpmati/kumpmati.github.io",
-      "url": ""
-    },
-    {
-      "name": "Wearhouse",
-      "description": "Reaktor junior preassignment for summer 2021 (Frontend)",
-      "stack": ["React"],
-      "githubUrl": "https://github.com/kumpmati/",
-      "url": "https://wearhouse.netlify.app/"
+      "githubUrl": "https://github.com/kumpmati/nopsa",
+      "url": "https://nopsa.xyz"
     }
   ]
 }
